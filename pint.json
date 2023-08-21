@@ -1,0 +1,11 @@
+{
+    "preset": "laravel",
+    "rules": {
+        "no_extra_blank_lines": {
+            "tokens": ["return"]
+        },
+        "php_unit_method_casing": true,
+        "simplified_null_return": true,
+        "statement_indentation": true
+    }
+}
