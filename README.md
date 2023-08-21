@@ -13,15 +13,17 @@ A share link is a URL that enables users to effortlessly share content from your
 This package leverages Laravel's blade components to offer a quick and efficient way to integrate share links into your Laravel application. Blade components provide an expressive, clean syntax that makes it easy to register and render share links, improving the user experience for sharing your content across various platforms. Let's dive into an example to get started.
 
 ```html
-<x-share-links::link service="twitter" text="Check out this Laravel package to make link sharing easy!" url="https://defectivecode.com/packages/link-sharer">
+<x-share-links::link
+    service="twitter"
+    text="Check out this Laravel package to make link sharing easy!"
+    url="https://defectivecode.com/packages/link-sharer"
+>
     <!-- Your HTML code here to control the look and feel of the share button -->
-    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-        Click me!
-    </button>
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Click me!</button>
 </x-share-links::link>
 ```
 
-> Some services provide extra parameters that can be passed to the component.  These are documented in the table below.
+> Some services provide extra parameters that can be passed to the component. These are documented in the table below.
 
 # Installation
 
@@ -29,21 +31,21 @@ This package leverages Laravel's blade components to offer a quick and efficient
     ```bash
     composer require defectivecode/link-sharer
     ```
-2. That's it!  Our package will automatically install using Laravel's package discovery.
+2. That's it! Our package will automatically install using Laravel's package discovery.
 
 # Supported Services
 
 | Service   | Text Supported | URL Supported | Notes                                                                                                                                                                              |
-|-----------|:--------------:|:-------------:|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Facebook  |       ❌        |      ✔️       |                                                                                                                                                                                    |
+| --------- | :------------: | :-----------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Facebook  |       ❌       |      ✔️       |                                                                                                                                                                                    |
 | Gmail     |       ✔️       |      ✔️       | Supports extra props <br> `to`: The to address of the email. <br> `su`: The subject of the email. <br> `bcc` The blind carbon copy addresses. <br> `cc` The carbon copy addresses. |
-| LinkedIn  |       ❌        |      ✔️       |                                                                                                                                                                                    |   
+| LinkedIn  |       ❌       |      ✔️       |                                                                                                                                                                                    |
 | Pinterest |       ✔️       |      ✔️       | `media`: An URL of an image you wish to share.                                                                                                                                     |
 | Reddit    |       ✔️       |      ✔️       |                                                                                                                                                                                    |
 | Telegram  |       ✔️       |      ✔️       |                                                                                                                                                                                    |
-| Tumblr    |      ✔️️       |     ✔️  ️     | `tags`: Any tags you wish to have attached to the Tumblr post.                                                                                                                     |
-| Twitter   |       ✔️       |      ✔️       |                                                                                                                                                                                    |   
-| Whatsapp  |       ✔️       |      ✔️       | URL is not supported by Whatsapp directly.  We will append the URL provided to the text message.                                                                                   |   
+| Tumblr    |      ✔️️       |     ✔️ ️      | `tags`: Any tags you wish to have attached to the Tumblr post.                                                                                                                     |
+| Twitter   |       ✔️       |      ✔️       |                                                                                                                                                                                    |
+| Whatsapp  |       ✔️       |      ✔️       | URL is not supported by Whatsapp directly. We will append the URL provided to the text message.                                                                                    |
 
 ## Contributing
 
