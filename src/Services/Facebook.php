@@ -4,15 +4,9 @@ namespace DefectiveCode\LinkSharer\Services;
 
 class Facebook extends Service
 {
-    protected function mapParameters(): array
-    {
-        return [
-            'url' => 'u',
-        ];
-    }
+    protected string $baseUrl = 'https://www.facebook.com/sharer/sharer.php';
 
-    protected function baseUrl(): string
-    {
-        return 'https://www.facebook.com/sharer/sharer.php';
-    }
+    protected array $baseParameterMapping = [
+        'url' => 'u',
+    ];
 }

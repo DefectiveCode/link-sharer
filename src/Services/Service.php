@@ -13,27 +13,41 @@ abstract class Service
 
     public function generateLink(): string
     {
-        return $this->baseUrl().'?'.$this->encodedQueryParameters();
+        return $this->baseUrl.'?'.$this->encodedQueryParameters();
     }
-
-    abstract protected function mapParameters(): array;
-
-    abstract protected function baseUrl(): string;
 
     protected function encodedQueryParameters(): string
     {
-        $this->prepareAttributes();
+        if (method_exists($this, 'prepareAttributes')) {
+            $this->prepareAttributes();
+        }
 
         return Arr::query(
             collect($this->attributes)
-                ->only(array_keys($this->mapParameters()))
-                ->mapWithKeys(fn ($value, $key) => [$this->mapParameters()[$key] => $value])
-                ->filter()
+                ->mapWithKeys(function ($value, $key) {
+                    if ($this->isBaseParameter($key) && isset($this->baseParameterMapping[$key])) {
+                        return [$this->baseParameterMapping[$key] => $value];
+                    }
+
+                    return [$key => $value];
+                })
+                ->merge($this->defaultParameters ?? [])
+                ->only($this->allowedParameters())
                 ->toArray()
         );
     }
 
-    protected function prepareAttributes(): void
+    protected function isBaseParameter(string $parameter): bool
     {
+        return in_array($parameter, ['url', 'text']);
+    }
+
+    protected function allowedParameters(): array
+    {
+        return array_merge(
+            property_exists($this, 'baseParameterMapping') ? array_values($this->baseParameterMapping) : ['text', 'url'],
+            property_exists($this, 'additionalParameters') ? array_values($this->additionalParameters) : [],
+            property_exists($this, 'defaultParameters') ? array_keys($this->defaultParameters) : [],
+        );
     }
 }

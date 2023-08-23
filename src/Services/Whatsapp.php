@@ -2,30 +2,11 @@
 
 namespace DefectiveCode\LinkSharer\Services;
 
+use DefectiveCode\LinkSharer\Traits\AppendsLinks;
+
 class Whatsapp extends Service
 {
-    protected function mapParameters(): array
-    {
-        return [
-            'text' => 'text',
-        ];
-    }
+    use AppendsLinks;
 
-    protected function baseUrl(): string
-    {
-        return 'https://wa.me';
-    }
-
-    protected function prepareAttributes(): void
-    {
-        if (isset($this->attributes['text']) && isset($this->attributes['url'])) {
-            $this->attributes['text'] = $this->attributes['text'].' '.$this->attributes['url'];
-
-            return;
-        }
-
-        if (isset($this->attributes['url'])) {
-            $this->attributes['text'] = $this->attributes['url'];
-        }
-    }
+    protected string $baseUrl = 'https://wa.me';
 }

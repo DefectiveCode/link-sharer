@@ -15,9 +15,12 @@ class LinkSharerServiceProvider extends ServiceProvider
         Route::get('test', function () {
             $html = <<<'HTML'
                 <script src="https://cdn.tailwindcss.com"></script>
-                <x-link-sharer service="whatsapp" text="SHARE ME" url="https://google.com" class="p-4">
-                    <span class="text-red-900 font-bold m-10">SHARE ME ON TWITTER</span>
+                <x-link-sharer service="Baidu" via="ezra" text="SHARE ME" to="ezrabynx@gmail.com" url="https://google.com" hashtags="test,2" text="my summary" class="p-4">
+                    <span class="text-red-900 font-bold m-10">SHARE ME</span>
                 </x-link-sharer>
+
+
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=google.com&title=title&summary=summary&source=facebook.com ">fdsfds</a>
             HTML;
 
             return Blade::render($html);
