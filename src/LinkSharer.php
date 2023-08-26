@@ -9,8 +9,8 @@ class LinkSharer extends Component
 {
     public function __construct(
         public string $service,
-        public string $target = '_blank',
         public string $class = '',
+        public string $target = '_blank',
     ) {
     }
 

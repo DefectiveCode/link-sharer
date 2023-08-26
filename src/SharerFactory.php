@@ -2,8 +2,8 @@
 
 namespace DefectiveCode\LinkSharer;
 
-use DefectiveCode\LinkSharer\Services\Service;
 use InvalidArgumentException;
+use DefectiveCode\LinkSharer\Services\Service;
 
 class SharerFactory
 {
