@@ -2,16 +2,15 @@
 
 namespace DefectiveCode\LinkSharer\Services;
 
-class ScoopIt extends Service
+class Threema extends Service
 {
-    protected string $baseUrl = 'https://www.scoop.it/bookmarklet';
+    protected string $baseUrl = 'threema://compose';
 
     protected array $baseParameterMapping = [
-        'text' => 'title',
-        'url' => 'url',
+        'url' => 'text',
     ];
 
     protected array $additionalParameters = [
-        'note',
+        'id',
     ];
 }

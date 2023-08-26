@@ -1,6 +1,6 @@
 <?php
 
-namespace DefectiveCode\Skeleton\Tests;
+namespace DefectiveCode\LinkSharer\Tests;
 
 class ExampleTest extends TestCase
 {

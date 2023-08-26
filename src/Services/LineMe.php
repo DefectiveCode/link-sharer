@@ -2,9 +2,9 @@
 
 namespace DefectiveCode\LinkSharer\Services;
 
-class Mix extends Service
+class LineMe extends Service
 {
-    protected string $baseUrl = 'https://mix.com/add';
+    protected string $baseUrl = 'https://social-plugins.line.me/lineit/share';
 
     protected array $baseParameterMapping = [
         'url' => 'url',

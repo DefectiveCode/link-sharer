@@ -12,6 +12,7 @@ class Douban extends Service
     ];
 
     protected array $additionalParameters = [
+        'comment',
         'text',
     ];
 }

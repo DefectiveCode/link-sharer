@@ -2,12 +2,12 @@
 
 namespace DefectiveCode\LinkSharer\Services;
 
-class Slashdot extends Service
+class Skype extends Service
 {
-    protected string $baseUrl = 'https://slashdot.org/bookmark.pl';
+    protected string $baseUrl = 'https://web.skype.com/share';
 
     protected array $baseParameterMapping = [
-        'text' => 'title',
+        'text' => 'text',
         'url' => 'url',
     ];
 }

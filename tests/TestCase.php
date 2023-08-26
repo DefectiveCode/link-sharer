@@ -1,6 +1,6 @@
 <?php
 
-namespace DefectiveCode\Skeleton\Tests;
+namespace DefectiveCode\LinkSharer\Tests;
 
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Http;
