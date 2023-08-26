@@ -17,7 +17,7 @@ class QZoneTest extends TestCase
         ]);
 
         $this->assertEquals(
-            'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?title=Share%20Me&summary=Summary&url=https%3A%2F%2Fwww.defectivecode.com',
+            'https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?title=Share%20Me&summary=Summary&url=https%3A%2F%2Fwww.defectivecode.com',
             $service->generateLink()
         );
     }
