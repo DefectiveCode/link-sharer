@@ -12,7 +12,7 @@
     </a>
 </p>
 
-<p align="center">A package by Defective Code</p>
+<h1 style="text-align: center;">Link Sharer</h1>
 
 # Introduction
 
