@@ -4,7 +4,7 @@ In the event that you identify any security vulnerabilities within our software,
 
 ## 1. Reporting the Vulnerability
 
-Please email your findings directly to our Security Team at security@defectivecode.com.
+Please email your findings directly to our Security Team at corey@defectivecode.com.
 
 ## 2. Provide Detailed Information
 
