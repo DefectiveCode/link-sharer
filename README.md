@@ -37,27 +37,27 @@ You may read the [documentation on our website](https://www.defectivecode.com/pa
 
 Thank you for using our open source package. Your understanding of the following support guidelines is crucial to ensure a smooth experience with our project:
 
-## Community Driven Support:
+## Community Driven Support
 
 As an open-source project, our primary support mechanism is our vibrant community. For general questions or troubleshooting, we recommend turning to community forums, discussion boards, or our project's dedicated channels.
 
-## Bugs, and Feature Prioritization:
+## Bugs, and Feature Prioritization
 
 The reality of managing an open-source project means we can't address every reported bug immediately. However, we're committed to the project's integrity. We prioritize bug fixes in the following order:
 
-### 1. Bugs Affecting Our Paid Products:
+### 1. Bugs Affecting Our Paid Products
 
 Bugs that impact our paid products will always be our top priority. In some cases, we may only address bugs that affect us directly.
 
-### 2. Community Pull Requests:
+### 2. Community Pull Requests
 
 If you've identified a bug and have a solution, please submit a pull request. After issues affecting our products, we give the next highest priority to these community-driven fixes. Once reviewed and approved, we'll merge your solution and credit your invaluable contribution.
 
-### 3. Financial Support:
+### 3. Financial Support
 
 For bugs that don't fall into the above categories but need urgent attention, you have the option to financially support their resolution. Using the order form linked with every open issue, you can contribute to the bug's resolution. We prioritize such bugs based on the dollar amount of support received.
 
-## 3. Community Contributions:
+## 3. Community Contributions
 
 Open source thrives when its community is active. Even if you're not fixing bugs, consider contributing through code improvements, documentation updates, tutorials, or by assisting others in community channels. We highly encourage everyone, as a community, to help support open-source work.
 
