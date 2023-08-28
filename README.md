@@ -1,5 +1,5 @@
 <p align="center"><img width="300" src="logo.gif" alt="Defective Code Logo"></p>
-<p align="center">A package by Defective Code</p>
+<p align="center" style="font-weight: bold">A package by Defective Code</p>
 
 <p align="center">
     <a href="https://packagist.org/packages/defectivecode/link-sharer">
