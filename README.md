@@ -1,4 +1,4 @@
-<p align="center"><img width="300" src="logo.gif" alt="Defective Code Logo"></p>
+<p align="center"><img width="300" src="./docs/logo.gif" alt="Defective Code Logo"></p>
 <p align="center" style="font-weight: bold">A package by Defective Code</p>
 
 <p align="center">

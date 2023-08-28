@@ -1,16 +1,27 @@
-# Link Sharer
+<p align="center"><img width="500" src="logo.gif" alt="Defective Code Logo"></p>
+<p align="center" style="font-weight: bold">A package by Defective Code</p>
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/defectivecode/link-sharer.svg?style=flat-square)](https://packagist.org/packages/defectivecode/link-sharer)
-[![Tests](https://img.shields.io/github/actions/workflow/status/defectivecode/link-sharer/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/defectivecode/link-sharer/actions/workflows/run-tests.yml)
-[![Total Downloads](https://img.shields.io/packagist/dt/defectivecode/link-sharer.svg?style=flat-square)](https://packagist.org/packages/defectivecode/link-sharer)
+<p align="center">
+    <a href="https://packagist.org/packages/defectivecode/link-sharer">
+        <img src="https://poser.pugx.org/defectivecode/link-sharer/d/total.svg" alt="Total Downloads">
+    </a>
+    <a href="https://packagist.org/packages/defectivecode/link-sharer">
+        <img src="https://poser.pugx.org/defectivecode/link-sharer/v/stable.svg" alt="Latest Stable Version">
+    </a>
+    <a href="https://packagist.org/packages/defectivecode/link-sharer">
+        <img src="https://poser.pugx.org/defectivecode/link-sharer/license.svg" alt="License">
+    </a>
+</p>
 
-## Purpose
+# Introduction
 
 This package simplifies the process of adding share links to your Laravel application. A list of currently supported services can be found in the table below. We are constantly striving to expand our offerings and welcome contributions from the community. If you wish to add new services, please feel free to submit a pull request!
 
 A share link is a URL that enables users to effortlessly share content from your website or application on various social media platforms or through other communication channels. It is composed of a base URL for a specific social media platform, combined with query parameters that define the content to be shared. These parameters typically include the URL of the page being shared and a pre-populated message or description. By embedding these share links in HTML anchor tags `<a>`, users are offered a smooth experience when sharing your content across different platforms. As illustrated in the examples, the share links enable users to share a blog post on Twitter, Facebook, and Telegram with a predefined message. This open-source package provides a convenient solution for generating share links, broadening the exposure and visibility of your content on popular social media platforms.
 
 This package leverages Laravel's blade components to offer a quick and efficient way to integrate share links into your Laravel application. Blade components provide an expressive, clean syntax that makes it easy to register and render share links, improving the user experience for sharing your content across various platforms. Let's dive into an example to get started.
+
+## Example
 
 ```html
 <x-link-sharer service="twitter" text="Share me!" url="https://www.defectivecode.com" class="p-4">
