@@ -12,8 +12,6 @@
     </a>
 </p>
 
-<h1 style="text-align: center;">Link Sharer</h1>
-
 # Introduction
 
 This package simplifies the process of adding share links to your Laravel application. A list of currently supported services can be found in the table below. We are constantly striving to expand our offerings and welcome contributions from the community. If you wish to add new services, please feel free to submit a pull request!
