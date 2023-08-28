@@ -1,5 +1,4 @@
-<p align="center"><img width="300" src="./docs/logo.gif" alt="Defective Code Logo"></p>
-<p align="center" style="font-weight: bold">A package by Defective Code</p>
+<p align="center"><img width="500" src="./docs/logo.gif" alt="Defective Code Logo"></p>
 
 <p align="center">
     <a href="https://packagist.org/packages/defectivecode/link-sharer">
@@ -12,6 +11,8 @@
         <img src="https://poser.pugx.org/defectivecode/link-sharer/license.svg" alt="License">
     </a>
 </p>
+
+<p align="center">A package by Defective Code</p>
 
 # Introduction
 

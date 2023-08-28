@@ -1,5 +1,4 @@
 <p align="center"><img width="500" src="logo.gif" alt="Defective Code Logo"></p>
-<p align="center" style="font-weight: bold">A package by Defective Code</p>
 
 <p align="center">
     <a href="https://packagist.org/packages/defectivecode/link-sharer">
@@ -12,6 +11,8 @@
         <img src="https://poser.pugx.org/defectivecode/link-sharer/license.svg" alt="License">
     </a>
 </p>
+
+<p align="center">A package by Defective Code</p>
 
 # Introduction
 
@@ -46,19 +47,41 @@ Service providers occasionally update their share links without prior notice or 
 
 > Some services provide extra parameters that can be passed to the component. These are documented in the table below.
 
-| Service   | Text Supported | URL Supported | Notes                                                                                                                                                                              |
-| --------- | :------------: | :-----------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Facebook  |       ❌       |      ✔️       |                                                                                                                                                                                    |
-| Gmail     |       ✔️       |      ✔️       | Supports extra props <br> `to`: The to address of the email. <br> `su`: The subject of the email. <br> `bcc` The blind carbon copy addresses. <br> `cc` The carbon copy addresses. |
-| LinkedIn  |       ❌       |      ✔️       |                                                                                                                                                                                    |
-| Pinterest |       ✔️       |      ✔️       | `media`: An URL of an image you wish to share.                                                                                                                                     |
-| Reddit    |       ✔️       |      ✔️       |                                                                                                                                                                                    |
-| Telegram  |       ✔️       |      ✔️       |                                                                                                                                                                                    |
-| Tumblr    |      ✔️️       |     ✔️ ️      | `tags`: Any tags you wish to have attached to the Tumblr post.                                                                                                                     |
-| Twitter   |       ✔️       |      ✔️       |                                                                                                                                                                                    |
-| Whatsapp  |       ✔️       |      ✔️       | URL is not supported by Whatsapp directly. We will append the URL provided to the text message.                                                                                    |
-
-# Contributing
+| Service     | Text Supported | URL Supported | Notes                                                                                                                                                                                                                  |
+| ----------- | :------------: | :-----------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Blogger     |       ✔️       |      ✔️       | `t` The text of the blog post.                                                                                                                                                                                         |
+| Diaspora    |       ✔️       |      ✔️       |                                                                                                                                                                                                                        |
+| Diigo       |       ✔️       |      ✔️       | `description` A description to add to the post.                                                                                                                                                                        |
+| Douban      |       ✔️       |      ✔️       | `comment` A commend to add to the post.                                                                                                                                                                                |
+| Evernote    |       ✔️       |      ✔️       |                                                                                                                                                                                                                        |
+| Facebook    |       ❌       |      ✔️       | `quote` A quote to add to the post.                                                                                                                                                                                    |
+| Flipboard   |       ✔️       |      ✔️       |                                                                                                                                                                                                                        |
+| Gmail       |       ✔️       |      ✔️       | `bcc` A comma-separated list of email addresses to BCC. <br> `cc` A comma-separated list of email addresses to CC. <br> `su` The subject of the email. <br> `to` A comma-separated list of email addresses to send to. |
+| HackNews    |       ✔️       |      ✔️       |                                                                                                                                                                                                                        |
+| Instapaper  |       ✔️       |      ✔️       | `description` A description of the post.                                                                                                                                                                               |
+| LineMe      |      ❌️       |      ✔️       |                                                                                                                                                                                                                        |
+| LinkedIn    |       ❌       |      ✔️       |                                                                                                                                                                                                                        |
+| LiveJournal |       ✔️       |      ✔️       |                                                                                                                                                                                                                        |
+| Meneame     |      ❌️       |      ✔️       |                                                                                                                                                                                                                        |
+| Okru        |      ❌️       |      ✔️       |                                                                                                                                                                                                                        |
+| Outlook     |       ✔️       |      ✔️       |                                                                                                                                                                                                                        |
+| Pinterest   |       ✔️       |      ✔️       | `media` An image URL to show on the post.                                                                                                                                                                              |
+| Plurk       |      ❌ ️      |      ✔️       |                                                                                                                                                                                                                        |
+| Pocket      |       ✔️       |      ✔️       |                                                                                                                                                                                                                        |
+| QZone       |       ✔️       |      ✔️       | `summary` A summary of the post.                                                                                                                                                                                       |
+| Reddit      |       ✔️       |      ✔️       |                                                                                                                                                                                                                        |
+| Renren      |       ✔️       |      ✔️       | `description` A description of the post. <br> `srcUrl` The original URL of the post.                                                                                                                                   |
+| Skype       |       ✔️       |      ✔️       |                                                                                                                                                                                                                        |
+| Telegram    |       ✔️       |      ✔️       |                                                                                                                                                                                                                        |
+| Threema     |       ❌       |      ✔️       | `id` The id of the person to send the post.                                                                                                                                                                            |
+| Tumblr      |       ✔️       |      ✔️       | `caption` A caption to add to the post. <br> `tags` A comma seperated list of tags to apply to the post.                                                                                                               |
+| Twitter     |       ✔️       |      ✔️       | `hastags` A comma seperated list of hash tags to apply to the tweet. <br> `via` The tweeter to give credit to.                                                                                                         |
+| Viber       |       ✔️       |      ✔️       |                                                                                                                                                                                                                        |
+| VKontakte   |       ✔️       |      ✔️       | `description` A description of the post. <br> `image` An image URL to show on the post.                                                                                                                                |
+| Weibo       |       ✔️       |      ✔️       |                                                                                                                                                                                                                        |
+| WhatsApp    |       ✔️       |      ✔️       |                                                                                                                                                                                                                        |
+| Xing        |       ❌       |      ✔️       |                                                                                                                                                                                                                        |
+| YahooMail   |       ✔️       |      ✔️       |                                                                                                                                                                                                                        |
 
 # Contributing
 
