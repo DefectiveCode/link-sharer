@@ -1,10 +1,19 @@
-# Skeleton
+<p align="center"><img width="300" src="logo.gif" alt="Defective Code Logo"></p>
+<p align="center">A package by Defective Code</p>
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/defectivecode/skeleton.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
-[![Tests](https://img.shields.io/github/actions/workflow/status/defectivecode/skeleton/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/:vendor_slug/:package_slug/actions/workflows/run-tests.yml)
-[![Total Downloads](https://img.shields.io/packagist/dt/defectivecode/skeleton.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
+<p align="center">
+    <a href="https://packagist.org/packages/defectivecode/link-sharer">
+        <img src="https://poser.pugx.org/defectivecode/link-sharer/d/total.svg" alt="Total Downloads">
+    </a>
+    <a href="https://packagist.org/packages/defectivecode/link-sharer">
+        <img src="https://poser.pugx.org/defectivecode/link-sharer/v/stable.svg" alt="Latest Stable Version">
+    </a>
+    <a href="https://packagist.org/packages/defectivecode/link-sharer">
+        <img src="https://poser.pugx.org/defectivecode/link-sharer/license.svg" alt="License">
+    </a>
+</p>
 
-## Purpose
+# Introduction
 
 This package simplifies the process of adding share links to your Laravel application. A list of currently supported services can be found in the table below. We are constantly striving to expand our offerings and welcome contributions from the community. If you wish to add new services, please feel free to submit a pull request!
 
@@ -12,45 +21,49 @@ A share link is a URL that enables users to effortlessly share content from your
 
 This package leverages Laravel's blade components to offer a quick and efficient way to integrate share links into your Laravel application. Blade components provide an expressive, clean syntax that makes it easy to register and render share links, improving the user experience for sharing your content across various platforms. Let's dive into an example to get started.
 
+## Example
+
 ```html
-<x-share-links::link
-    service="twitter"
-    text="Check out this Laravel package to make link sharing easy!"
-    url="https://defectivecode.com/packages/link-sharer"
->
+<x-link-sharer service="twitter" text="Share me!" url="https://www.defectivecode.com" class="p-4">
     <!-- Your HTML code here to control the look and feel of the share button -->
-    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Click me!</button>
-</x-share-links::link>
+    <span class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Click me!</span>
+</x-link-sharer>
 ```
 
-> Some services provide extra parameters that can be passed to the component. These are documented in the table below.
+# Documentation
 
-# Installation
+You may read the [documentation on our website](https://www.defectivecode.com/packages/link-sharer).
 
-1. First install the PHP package by running the following composer command:
-    ```bash
-    composer require defectivecode/link-sharer
-    ```
-2. That's it! Our package will automatically install using Laravel's package discovery.
+# Support Guidelines
 
-# Supported Services
+Thank you for using our open source package. Your understanding of the following support guidelines is crucial to ensure a smooth experience with our project:
 
-| Service   | Text Supported | URL Supported | Notes                                                                                                                                                                              |
-| --------- | :------------: | :-----------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Facebook  |       ❌       |      ✔️       |                                                                                                                                                                                    |
-| Gmail     |       ✔️       |      ✔️       | Supports extra props <br> `to`: The to address of the email. <br> `su`: The subject of the email. <br> `bcc` The blind carbon copy addresses. <br> `cc` The carbon copy addresses. |
-| LinkedIn  |       ❌       |      ✔️       |                                                                                                                                                                                    |
-| Pinterest |       ✔️       |      ✔️       | `media`: An URL of an image you wish to share.                                                                                                                                     |
-| Reddit    |       ✔️       |      ✔️       |                                                                                                                                                                                    |
-| Telegram  |       ✔️       |      ✔️       |                                                                                                                                                                                    |
-| Tumblr    |      ✔️️       |     ✔️ ️      | `tags`: Any tags you wish to have attached to the Tumblr post.                                                                                                                     |
-| Twitter   |       ✔️       |      ✔️       |                                                                                                                                                                                    |
-| Whatsapp  |       ✔️       |      ✔️       | URL is not supported by Whatsapp directly. We will append the URL provided to the text message.                                                                                    |
+## Community Driven Support:
 
-## Contributing
+As an open-source project, our primary support mechanism is our vibrant community. For general questions or troubleshooting, we recommend turning to community forums, discussion boards, or our project's dedicated channels.
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+## Bugs, and Feature Prioritization:
 
-## License
+The reality of managing an open-source project means we can't address every reported bug immediately. However, we're committed to the project's integrity. We prioritize bug fixes in the following order:
+
+### 1. Bugs Affecting Our Paid Products:
+
+Bugs that impact our paid products will always be our top priority. In some cases, we may only address bugs that affect us directly.
+
+### 2. Community Pull Requests:
+
+If you've identified a bug and have a solution, please submit a pull request. After issues affecting our products, we give the next highest priority to these community-driven fixes. Once reviewed and approved, we'll merge your solution and credit your invaluable contribution.
+
+### 3. Financial Support:
+
+For bugs that don't fall into the above categories but need urgent attention, you have the option to financially support their resolution. Using the order form linked with every open issue, you can contribute to the bug's resolution. We prioritize such bugs based on the dollar amount of support received.
+
+## 3. Community Contributions:
+
+Open source thrives when its community is active. Even if you're not fixing bugs, consider contributing through code improvements, documentation updates, tutorials, or by assisting others in community channels. We highly encourage everyone, as a community, to help support open-source work.
+
+_To reiterate, DefectiveCode will prioritize bugs based on how they impact our paid products, community pull requests, and the financial support received for individual issues. We appreciate your patience and contributions, ensuring the project's ongoing success._
+
+# License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
