@@ -39,8 +39,10 @@ A share link is a URL combining a social media base URL with query parameters fo
 
 ## Support
 
-Service providers occasionally update their share links without prior notice. We make every effort to stay updated with these changes. However, if you encounter a non-functional service, kindly open an issue or submit a pull request. For adding a new service, refer to the [contributing](#contributing) section below.
+> [!WARNING]
+>Service providers occasionally update their share links without prior notice. We make every effort to stay updated with these changes. However, if you encounter a non-functional service, kindly open an issue or submit a pull request. For adding a new service, refer to the [contributing](#contributing) section below.
 
+> [!NOTE]
 > Some services provide extra parameters that can be passed to the component. These are documented in the table below.
 
 | Service     | Text Supported | URL Supported | Notes                                                                                                                                                                                                                  |
