@@ -21,7 +21,7 @@ A share link is a URL combining a social media base URL with query parameters fo
 ## Example
 
 ```html
-<x-link-sharer service="twitter" text="Share me!" url="https://www.defectivecode.com" class="p-4">
+<x-link-sharer service="twitter" text="Share me!" url="https://www.defectivecode.com" hashtags="awesome,links" class="p-4">
     <!-- Your HTML code here to control the look and feel of the share button -->
     <span class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Click me!</span>
 </x-link-sharer>
@@ -37,10 +37,8 @@ A share link is a URL combining a social media base URL with query parameters fo
 
 # Services
 
-## Support
-
 > [!WARNING]
->Service providers occasionally update their share links without prior notice. We make every effort to stay updated with these changes. However, if you encounter a non-functional service, kindly open an issue or submit a pull request. For adding a new service, refer to the [contributing](#contributing) section below.
+> Service providers occasionally update their share links without prior notice. We make every effort to stay updated with these changes. However, if you encounter a non-functional service, kindly open an issue or submit a pull request. For adding a new service, refer to the [contributing](#contributing) section below.
 
 > [!NOTE]
 > Some services provide extra parameters that can be passed to the component. These are documented in the table below.
@@ -52,8 +50,8 @@ A share link is a URL combining a social media base URL with query parameters fo
 | Diigo       |       ✔️       |      ✔️       | `description` A description to add to the post.                                                                                                                                                                        |
 | Douban      |       ✔️       |      ✔️       | `comment` A commend to add to the post.                                                                                                                                                                                |
 | Evernote    |       ✔️       |      ✔️       |                                                                                                                                                                                                                        |
-| Facebook    |       ❌       |      ✔️       | `quote` A quote to add to the post.                                                                                                                                                                                    |
-| Flipboard   |       ✔️       |      ✔️       |                                                                                                                                                                                                                        |
+| Facebook    |       ❌       |      ✔️       |                                                                                                                                                                                                                        |
+| Flipboard   |       ✔️       |      ✔️       | `quote` A quote to add to the post.                                                                                                                                                                                    |
 | Gmail       |       ✔️       |      ✔️       | `bcc` A comma-separated list of email addresses to BCC. <br> `cc` A comma-separated list of email addresses to CC. <br> `su` The subject of the email. <br> `to` A comma-separated list of email addresses to send to. |
 | HackNews    |       ✔️       |      ✔️       |                                                                                                                                                                                                                        |
 | Instapaper  |       ✔️       |      ✔️       | `description` A description of the post.                                                                                                                                                                               |
