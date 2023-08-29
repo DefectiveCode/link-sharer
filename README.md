@@ -21,7 +21,7 @@ A share link is a URL combining a social media base URL with query parameters fo
 ## Example
 
 ```html
-<x-link-sharer service="twitter" text="Share me!" url="https://www.defectivecode.com" class="p-4">
+<x-link-sharer service="twitter" text="Share me!" url="https://www.defectivecode.com" hashtags="awesome,links" class="p-4">
     <!-- Your HTML code here to control the look and feel of the share button -->
     <span class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Click me!</span>
 </x-link-sharer>

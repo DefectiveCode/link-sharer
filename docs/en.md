@@ -119,6 +119,7 @@ Please note that only the `baseUrl` is mandatory. The `baseParameterMapping`, `a
 
 ## `$baseUrl`
 
+> [!NOTE]
 > A service's URL _doesn't_ need to start with HTTPS. For instance, Viber uses `viber://forward`.
 
 The `baseUrl` property specifies the service's primary URL. This URL is foundational when generating the share link, to which query parameters get appended. Using Gmail as an example, its base URL is `https://mail.google.com/mail/u/0`.
