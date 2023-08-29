@@ -55,7 +55,7 @@ If you've identified a bug and have a solution, please submit a pull request. Af
 
 For issues outside the mentioned categories, you can opt to fund their resolution. Each open issue is linked to an order form where you can contribute financially. We prioritize these issues based on the funding amount provided.
 
-## 3. Community Contributions
+### Community Contributions
 
 Open source thrives when its community is active. Even if you're not fixing bugs, consider contributing through code improvements, documentation updates, tutorials, or by assisting others in community channels. We highly encourage everyone, as a community, to help support open-source work.
 
