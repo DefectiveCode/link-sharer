@@ -14,11 +14,9 @@
 
 # Introduction
 
-This package simplifies the process of adding share links to your Laravel application. A list of currently supported services can be found within the documentation. We are constantly striving to expand our offerings and welcome contributions from the community. If you wish to add new services, please feel free to submit a pull request!
+This package simplifies the process of adding share links to your Laravel application. Feel free to open a pull request if you notice we are missing a service!
 
-A share link is a URL that enables users to effortlessly share content from your website or application on various social media platforms or through other communication channels. It is composed of a base URL for a specific social media platform, combined with query parameters that define the content to be shared. These parameters typically include the URL of the page being shared and a pre-populated message or description. By embedding these share links in HTML anchor tags `<a>`, users are offered a smooth experience when sharing your content across different platforms. As illustrated in the examples, the share links enable users to share a blog post on Twitter, Facebook, and Telegram with a predefined message. This open-source package provides a convenient solution for generating share links, broadening the exposure and visibility of your content on popular social media platforms.
-
-This package leverages Laravel's blade components to offer a quick and efficient way to integrate share links into your Laravel application. Blade components provide an expressive, clean syntax that makes it easy to register and render share links, improving the user experience for sharing your content across various platforms. Let's dive into an example to get started.
+A share link is a URL combining a social media base URL with query parameters for sharing content from your website or app. Parameters usually include the content URL and a preset message. These links, as shown in examples, let users easily share posts on platforms like Twitter, Facebook, and Telegram. Use this open-source package to quickly create share links via Laravel's blade component system.
 
 ## Example
 
@@ -41,7 +39,7 @@ This package leverages Laravel's blade components to offer a quick and efficient
 
 ## Support
 
-Service providers occasionally update their share links without prior notice or maintaining backward compatibility. We make every effort to stay updated with these changes. However, if you encounter a non-functional service, kindly open an issue or submit a pull request. For adding a new service, refer to the [contributing](#contributing) section below.
+Service providers occasionally update their share links without prior notice. We make every effort to stay updated with these changes. However, if you encounter a non-functional service, kindly open an issue or submit a pull request. For adding a new service, refer to the [contributing](#contributing) section below.
 
 > Some services provide extra parameters that can be passed to the component. These are documented in the table below.
 
