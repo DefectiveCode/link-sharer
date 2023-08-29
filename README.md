@@ -41,7 +41,7 @@ Our open-source project is fueled by our awesome community. If you have question
 
 ## Bugs, and Feature Prioritization
 
-The reality of managing an open-source project means we can't address every reported bug or feature request immediately. We prioritize bug fixes in the following order:
+The reality of managing an open-source project means we can't address every reported bug or feature request immediately. We prioritize issues in the following order:
 
 ### 1. Bugs Affecting Our Paid Products
 
@@ -53,13 +53,13 @@ If you've identified a bug and have a solution, please submit a pull request. Af
 
 ### 3. Financial Support
 
-For bugs that don't fall into the above categories but need urgent attention, you have the option to financially support their resolution. Using the order form linked with every open issue, you can contribute to the bug's resolution. We prioritize such bugs based on the dollar amount of support received.
+For issues outside the mentioned categories, you can opt to fund their resolution. Each open issue is linked to an order form where you can contribute financially. We prioritize these issues based on the funding amount provided.
 
 ## 3. Community Contributions
 
 Open source thrives when its community is active. Even if you're not fixing bugs, consider contributing through code improvements, documentation updates, tutorials, or by assisting others in community channels. We highly encourage everyone, as a community, to help support open-source work.
 
-_To reiterate, DefectiveCode will prioritize bugs based on how they impact our paid products, community pull requests, and the financial support received for individual issues._
+_To reiterate, DefectiveCode will prioritize bugs based on how they impact our paid products, community pull requests, and the financial support received for issues._
 
 # License
 
