@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace DefectiveCode\LinkSharer\Tests\Traits;
 
 use DefectiveCode\LinkSharer\Tests\TestCase;

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace DefectiveCode\LinkSharer\Tests\Services;
 
 use DefectiveCode\LinkSharer\Services\Xing;

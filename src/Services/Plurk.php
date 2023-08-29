@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace DefectiveCode\LinkSharer\Services;
 
 class Plurk extends Service
