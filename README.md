@@ -12,6 +12,28 @@
     </a>
 </p>
 
+[English](https://www.defectivecode.com/packages/link-sharer/en) |
+[العربية](https://www.defectivecode.com/packages/link-sharer/ar) |
+[বাংলা](https://www.defectivecode.com/packages/link-sharer/bn) |
+[Bosanski](https://www.defectivecode.com/packages/link-sharer/bs) |
+[Deutsch](https://www.defectivecode.com/packages/link-sharer/de) |
+[Español](https://www.defectivecode.com/packages/link-sharer/es) |
+[Français](https://www.defectivecode.com/packages/link-sharer/fr) |
+[हिन्दी](https://www.defectivecode.com/packages/link-sharer/hi) |
+[Italiano](https://www.defectivecode.com/packages/link-sharer/it) |
+[日本語](https://www.defectivecode.com/packages/link-sharer/ja) |
+[한국어](https://www.defectivecode.com/packages/link-sharer/ko) |
+[मराठी](https://www.defectivecode.com/packages/link-sharer/mr) |
+[Português](https://www.defectivecode.com/packages/link-sharer/pt) |
+[Русский](https://www.defectivecode.com/packages/link-sharer/ru) |
+[Kiswahili](https://www.defectivecode.com/packages/link-sharer/sw) |
+[தமிழ்](https://www.defectivecode.com/packages/link-sharer/ta) |
+[తెలుగు](https://www.defectivecode.com/packages/link-sharer/te) |
+[Türkçe](https://www.defectivecode.com/packages/link-sharer/tr) |
+[اردو](https://www.defectivecode.com/packages/link-sharer/ur) |
+[Tiếng Việt](https://www.defectivecode.com/packages/link-sharer/vi) |
+[中文](https://www.defectivecode.com/packages/link-sharer/zh)
+
 # Introduction
 
 This package simplifies the process of adding share links to your Laravel application. Feel free to open a pull request if you notice we are missing a service!
