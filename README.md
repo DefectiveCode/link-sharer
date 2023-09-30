@@ -1,17 +1,5 @@
 <p align="center"><img width="500" src="https://defectivecode.com/logos/logo-animated.gif" alt="Defective Code Logo"></p>
 
-<p align="center">
-    <a href="https://packagist.org/packages/defectivecode/link-sharer">
-        <img src="https://poser.pugx.org/defectivecode/link-sharer/d/total.svg" alt="Total Downloads">
-    </a>
-    <a href="https://packagist.org/packages/defectivecode/link-sharer">
-        <img src="https://poser.pugx.org/defectivecode/link-sharer/v/stable.svg" alt="Latest Stable Version">
-    </a>
-    <a href="https://packagist.org/packages/defectivecode/link-sharer">
-        <img src="https://poser.pugx.org/defectivecode/link-sharer/license.svg" alt="License">
-    </a>
-</p>
-
 [English](https://www.defectivecode.com/packages/link-sharer/en) |
 [العربية](https://www.defectivecode.com/packages/link-sharer/ar) |
 [বাংলা](https://www.defectivecode.com/packages/link-sharer/bn) |
