@@ -23,10 +23,8 @@ A share link is a URL combining a social media base URL with query parameters fo
 
 # Services
 
-> [!WARNING]
 > Service providers occasionally update their share links without prior notice. We make every effort to stay updated with these changes. However, if you encounter a non-functional service, kindly open an issue or submit a pull request. For adding a new service, refer to the [contributing](#contributing) section below.
 
-> [!NOTE]
 > Some services provide extra parameters that can be passed to the component. These are documented in the table below.
 
 | Service     | Text Supported | URL Supported | Notes                                                                                                                                                                                                                  |
@@ -105,7 +103,6 @@ Please note that only the `baseUrl` is mandatory. The `baseParameterMapping`, `a
 
 ## `$baseUrl`
 
-> [!NOTE]
 > A service's URL _doesn't_ need to start with HTTPS. For instance, Viber uses `viber://forward`.
 
 The `baseUrl` property specifies the service's primary URL. This URL is foundational when generating the share link, to which query parameters get appended. Using Gmail as an example, its base URL is `https://mail.google.com/mail/u/0`.
