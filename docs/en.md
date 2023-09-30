@@ -1,17 +1,3 @@
-<p align="center"><img width="500" src="logo.gif" alt="Defective Code Logo"></p>
-
-<p align="center">
-    <a href="https://packagist.org/packages/defectivecode/link-sharer">
-        <img src="https://poser.pugx.org/defectivecode/link-sharer/d/total.svg" alt="Total Downloads">
-    </a>
-    <a href="https://packagist.org/packages/defectivecode/link-sharer">
-        <img src="https://poser.pugx.org/defectivecode/link-sharer/v/stable.svg" alt="Latest Stable Version">
-    </a>
-    <a href="https://packagist.org/packages/defectivecode/link-sharer">
-        <img src="https://poser.pugx.org/defectivecode/link-sharer/license.svg" alt="License">
-    </a>
-</p>
-
 # Introduction
 
 This package simplifies the process of adding share links to your Laravel application. Feel free to open a pull request if you notice we are missing a service!
@@ -165,7 +151,3 @@ Attributes passed into the service are accessible via the `$attributes` array. I
 
 -   If both `text` and `url` attributes are present, the `url` is appended to the `text` attribute.
 -   Should only the `url` attribute be available, the `text` attribute assumes the value of the `url`.
-
-# License
-
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
