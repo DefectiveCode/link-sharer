@@ -1,4 +1,9 @@
-<p align="center"><img width="500" src="https://defectivecode.com/logos/logo-animated.gif" alt="Defective Code Logo"></p>
+<p align="center">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://defectivecode.com/logos/logo-animated-dark.png">
+      <img width="450" alt="Defective Code Logo" src="https://defectivecode.com/logos/logo-animated-light.png">
+    </picture>
+</p>
 
 [English](https://www.defectivecode.com/packages/link-sharer/en) |
 [العربية](https://www.defectivecode.com/packages/link-sharer/ar) |
