@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace DefectiveCode\LinkSharer\Services;
 
+use Stringable;
 use Illuminate\Support\Arr;
 
 abstract class Service
@@ -22,7 +23,7 @@ abstract class Service
     /** @var array<string, string> */
     protected array $defaultParameters = [];
 
-    /** @param array<string, string> $attributes */
+    /** @param array<string, scalar|Stringable|null> $attributes */
     public function __construct(
         protected array $attributes,
     ) {}
@@ -40,22 +41,11 @@ abstract class Service
 
         return Arr::query(
             collect($this->attributes)
-                ->mapWithKeys(function ($value, $key) {
-                    if ($this->isBaseParameter($key) && isset($this->baseParameterMapping[$key])) {
-                        return [$this->baseParameterMapping[$key] => $value];
-                    }
-
-                    return [$key => $value];
-                })
+                ->mapWithKeys(fn ($value, $key) => [$this->baseParameterMapping[$key] ?? $key => $value])
                 ->merge($this->defaultParameters)
                 ->only($this->allowedParameters())
                 ->toArray()
         );
-    }
-
-    protected function isBaseParameter(string $parameter): bool
-    {
-        return in_array($parameter, ['url', 'text']);
     }
 
     /** @return list<string> */

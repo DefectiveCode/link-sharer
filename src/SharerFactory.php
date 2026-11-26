@@ -4,12 +4,13 @@ declare(strict_types=1);
 
 namespace DefectiveCode\LinkSharer;
 
+use Stringable;
 use InvalidArgumentException;
 use DefectiveCode\LinkSharer\Services\Service;
 
 class SharerFactory
 {
-    /** @param array<string, string> $attributes */
+    /** @param array<string, scalar|Stringable|null> $attributes */
     public static function make(string $service, array $attributes): Service
     {
         $class = __NAMESPACE__.'\\Services\\'.ucfirst($service);
