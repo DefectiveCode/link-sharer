@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace DefectiveCode\LinkSharer\Services;
 
-class Pocket extends Service
+class Raindrop extends Service
 {
-    protected string $baseUrl = 'https://getpocket.com/save';
+    protected string $baseUrl = 'https://app.raindrop.io/add';
 
     protected array $baseParameterMapping = [
         'text' => 'title',
-        'url' => 'url',
+        'url' => 'link',
     ];
 }

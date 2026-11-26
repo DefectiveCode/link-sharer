@@ -19,7 +19,7 @@ class ViberTest extends TestCase
         ]);
 
         $this->assertEquals(
-            'viber://forward?title=Share%20Me&url=https%3A%2F%2Fwww.defectivecode.com',
+            'viber://forward?text=Share%20Me%0Ahttps%3A%2F%2Fwww.defectivecode.com',
             $service->generateLink()
         );
     }

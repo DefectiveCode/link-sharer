@@ -21,7 +21,7 @@ class TwitterTest extends TestCase
         ]);
 
         $this->assertEquals(
-            'https://twitter.com/intent/tweet?hashtags=red%2Cblue&text=Share%20Me&url=https%3A%2F%2Fwww.defectivecode.com&via=defectivecode',
+            'https://x.com/intent/tweet?hashtags=red%2Cblue&text=Share%20Me&url=https%3A%2F%2Fwww.defectivecode.com&via=defectivecode',
             $service->generateLink()
         );
     }
