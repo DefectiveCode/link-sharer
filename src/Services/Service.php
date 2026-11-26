@@ -35,12 +35,14 @@ abstract class Service
 
     protected function encodedQueryParameters(): string
     {
-        if (method_exists($this, 'prepareAttributes')) {
-            $this->prepareAttributes();
+        $service = clone $this;
+
+        if (method_exists($service, 'prepareAttributes')) {
+            $service->prepareAttributes();
         }
 
         return Arr::query(
-            collect($this->attributes)
+            collect($service->attributes)
                 ->mapWithKeys(fn ($value, $key) => [$this->baseParameterMapping[$key] ?? $key => $value])
                 ->merge($this->defaultParameters)
                 ->only($this->allowedParameters())

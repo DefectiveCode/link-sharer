@@ -6,20 +6,20 @@ namespace DefectiveCode\LinkSharer\Tests\Services;
 
 use PHPUnit\Framework\Attributes\Test;
 use DefectiveCode\LinkSharer\Tests\TestCase;
-use DefectiveCode\LinkSharer\Services\Pocket;
+use DefectiveCode\LinkSharer\Services\Bluesky;
 
-class PocketTest extends TestCase
+class BlueskyTest extends TestCase
 {
     #[Test]
     public function itGeneratesAShareLink(): void
     {
-        $service = new Pocket([
+        $service = new Bluesky([
             'text' => 'Share Me',
             'url' => 'https://www.defectivecode.com',
         ]);
 
         $this->assertEquals(
-            'https://getpocket.com/save?title=Share%20Me&url=https%3A%2F%2Fwww.defectivecode.com',
+            'https://bsky.app/intent/compose?text=Share%20Me%0Ahttps%3A%2F%2Fwww.defectivecode.com',
             $service->generateLink()
         );
     }

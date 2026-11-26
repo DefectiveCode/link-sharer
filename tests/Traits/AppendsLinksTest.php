@@ -30,4 +30,26 @@ class AppendsLinksTest extends TestCase
             $service->generateLink()
         );
     }
+
+    #[Test]
+    public function itGeneratesTheSameLinkEveryTime(): void
+    {
+        $service = new class(['text' => 'text', 'url' => 'https://www.defectivecode.com']) extends Service
+        {
+            use AppendsLinks;
+
+            protected string $baseUrl = 'https://www.defectivecode.com/share';
+
+            protected array $baseParameterMapping = [
+                'text' => 'text',
+            ];
+        };
+
+        $service->generateLink();
+
+        $this->assertEquals(
+            'https://www.defectivecode.com/share?text=text%0Ahttps%3A%2F%2Fwww.defectivecode.com',
+            $service->generateLink()
+        );
+    }
 }

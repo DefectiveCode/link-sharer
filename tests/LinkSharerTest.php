@@ -52,7 +52,7 @@ class LinkSharerTest extends TestCase
         );
 
         $this->assertEquals(
-            '<a href="https://twitter.com/intent/tweet?text=123&url=https%3A%2F%2Fwww.defectivecode.com" target="_blank" class=""><span>Shared Me!</span></a>',
+            '<a href="https://x.com/intent/tweet?text=123&url=https%3A%2F%2Fwww.defectivecode.com" target="_blank" class=""><span>Shared Me!</span></a>',
             $link
         );
     }
