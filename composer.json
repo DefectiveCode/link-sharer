@@ -1,42 +1,49 @@
 {
-    "name": "defectivecode/link-sharer",
-    "type": "laravel",
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "DefectiveCode\\LinkSharer\\": "src"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "DefectiveCode\\LinkSharer\\Tests\\": "tests"
-        }
-    },
-    "authors": [
-        {
-            "name": "Corey McCormick",
-            "email": "corey@defectivecode.com"
-        }
-    ],
-    "require": {
-        "php": ">=8.2"
-    },
-    "require-dev": {
-        "orchestra/testbench": "^8.3",
-        "nunomaduro/collision": "^7.0",
-        "phpunit/phpunit": "^10.0",
-        "laravel/pint": "^1.8"
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "DefectiveCode\\LinkSharer\\LinkSharerServiceProvider"
-            ]
-        }
-    },
-    "scripts": {
-        "post-autoload-dump": [
-            "@php vendor/bin/testbench package:discover --ansi"
-        ]
+  "name": "defectivecode/link-sharer",
+  "description": "Simplifies the process of adding share links to your Laravel application.",
+  "type": "laravel",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "DefectiveCode\\LinkSharer\\": "src"
     }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "DefectiveCode\\LinkSharer\\Tests\\": "tests"
+    }
+  },
+  "authors": [
+    {
+      "name": "Corey McCormick",
+      "email": "corey@defectivecode.com"
+    }
+  ],
+  "require": {
+    "php": ">=8.5",
+    "illuminate/support": "^12.0 || ^13.0",
+    "illuminate/view": "^12.0 || ^13.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^10.0 || ^11.3",
+    "nunomaduro/collision": "^8.9.6",
+    "phpunit/phpunit": "^12.5.45 || ^13.4.8",
+    "laravel/pint": "^1.32.3",
+    "phpstan/phpstan": "^2.3.7"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "DefectiveCode\\LinkSharer\\LinkSharerServiceProvider"
+      ]
+    }
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "@php vendor/bin/testbench package:discover --ansi"
+    ],
+    "test": "vendor/bin/phpunit",
+    "lint": "vendor/bin/pint",
+    "analyse": "vendor/bin/phpstan analyse"
+  }
 }

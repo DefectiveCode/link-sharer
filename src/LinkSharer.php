@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace DefectiveCode\LinkSharer;
 
 use Closure;
+use Stringable;
 use Illuminate\View\Component;
 
 class LinkSharer extends Component
@@ -13,16 +14,20 @@ class LinkSharer extends Component
         public string $service,
         public string $class = '',
         public string $target = '_blank',
-    ) {
-    }
+    ) {}
 
     public function render(): Closure
     {
-        return function (array $data) {
-            $service = SharerFactory::make($data['service'], $data['attributes']->getAttributes());
-            $shareLink = $service->generateLink();
+        return $this->renderLink(...);
+    }
 
-            return '<a href="'.$shareLink.'" target="'.$this->target.'" class="'.$this->class.'">'.$data['slot'].'</a>';
-        };
+    /** @param array{slot: Stringable|string} $data */
+    protected function renderLink(array $data): string
+    {
+        /** @var array<string, scalar|Stringable|null> $attributes */
+        $attributes = $this->attributes->getAttributes();
+        $shareLink = SharerFactory::make($this->service, $attributes)->generateLink();
+
+        return '<a href="'.$shareLink.'" target="'.$this->target.'" class="'.$this->class.'">'.$data['slot'].'</a>';
     }
 }

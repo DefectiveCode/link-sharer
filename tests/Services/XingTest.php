@@ -4,12 +4,13 @@ declare(strict_types=1);
 
 namespace DefectiveCode\LinkSharer\Tests\Services;
 
+use PHPUnit\Framework\Attributes\Test;
 use DefectiveCode\LinkSharer\Services\Xing;
 use DefectiveCode\LinkSharer\Tests\TestCase;
 
 class XingTest extends TestCase
 {
-    /** @test */
+    #[Test]
     public function itGeneratesAShareLink(): void
     {
         $service = new Xing([

@@ -4,14 +4,29 @@ declare(strict_types=1);
 
 namespace DefectiveCode\LinkSharer\Services;
 
+use Stringable;
 use Illuminate\Support\Arr;
 
 abstract class Service
 {
+    protected string $baseUrl;
+
+    /** @var array<string, string> */
+    protected array $baseParameterMapping = [
+        'text' => 'text',
+        'url' => 'url',
+    ];
+
+    /** @var list<string> */
+    protected array $additionalParameters = [];
+
+    /** @var array<string, string> */
+    protected array $defaultParameters = [];
+
+    /** @param array<string, scalar|Stringable|null> $attributes */
     public function __construct(
         protected array $attributes,
-    ) {
-    }
+    ) {}
 
     public function generateLink(): string
     {
@@ -26,30 +41,20 @@ abstract class Service
 
         return Arr::query(
             collect($this->attributes)
-                ->mapWithKeys(function ($value, $key) {
-                    if ($this->isBaseParameter($key) && isset($this->baseParameterMapping[$key])) {
-                        return [$this->baseParameterMapping[$key] => $value];
-                    }
-
-                    return [$key => $value];
-                })
-                ->merge($this->defaultParameters ?? [])
+                ->mapWithKeys(fn ($value, $key) => [$this->baseParameterMapping[$key] ?? $key => $value])
+                ->merge($this->defaultParameters)
                 ->only($this->allowedParameters())
                 ->toArray()
         );
     }
 
-    protected function isBaseParameter(string $parameter): bool
-    {
-        return in_array($parameter, ['url', 'text']);
-    }
-
+    /** @return list<string> */
     protected function allowedParameters(): array
     {
         return array_merge(
-            property_exists($this, 'baseParameterMapping') ? array_values($this->baseParameterMapping) : ['text', 'url'],
-            property_exists($this, 'additionalParameters') ? array_values($this->additionalParameters) : [],
-            property_exists($this, 'defaultParameters') ? array_keys($this->defaultParameters) : [],
+            array_values($this->baseParameterMapping),
+            $this->additionalParameters,
+            array_keys($this->defaultParameters),
         );
     }
 }

@@ -4,16 +4,16 @@ declare(strict_types=1);
 
 namespace DefectiveCode\LinkSharer\Tests;
 
-use DefectiveCode\LinkSharer\LinkSharer;
+use Illuminate\Support\Facades\Blade;
+use PHPUnit\Framework\Attributes\Test;
+use DefectiveCode\LinkSharer\LinkSharerServiceProvider;
 
 class LinkSharerTest extends TestCase
 {
-    /** @test */
+    #[Test]
     public function itReturnsAnAnchorTag(): void
     {
-        $sharer = new LinkSharer('facebook');
-
-        $link = $sharer->render()($this->componentData($sharer->data()));
+        $link = Blade::render('<x-link-sharer service="facebook" url="https://www.defectivecode.com">Shared Me!</x-link-sharer>');
 
         $this->assertEquals(
             '<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.defectivecode.com" target="_blank" class="">Shared Me!</a>',
@@ -21,12 +21,10 @@ class LinkSharerTest extends TestCase
         );
     }
 
-    /** @test */
+    #[Test]
     public function itChangesTheAnchorTagTarget(): void
     {
-        $sharer = new LinkSharer('facebook', '', '_self');
-
-        $link = $sharer->render()($this->componentData($sharer->data()));
+        $link = Blade::render('<x-link-sharer service="facebook" target="_self" url="https://www.defectivecode.com">Shared Me!</x-link-sharer>');
 
         $this->assertEquals(
             '<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.defectivecode.com" target="_self" class="">Shared Me!</a>',
@@ -34,12 +32,10 @@ class LinkSharerTest extends TestCase
         );
     }
 
-    /** @test */
+    #[Test]
     public function itAddsTheClassesToTheParentAnchorTag(): void
     {
-        $sharer = new LinkSharer('facebook', 'text-red text-bold');
-
-        $link = $sharer->render()($this->componentData($sharer->data()));
+        $link = Blade::render('<x-link-sharer service="facebook" class="text-red text-bold" url="https://www.defectivecode.com">Shared Me!</x-link-sharer>');
 
         $this->assertEquals(
             '<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.defectivecode.com" target="_blank" class="text-red text-bold">Shared Me!</a>',
@@ -47,13 +43,22 @@ class LinkSharerTest extends TestCase
         );
     }
 
-    protected function componentData(array $baseData): array
+    #[Test]
+    public function itAcceptsBoundAttributesAndAnHtmlSlot(): void
     {
-        $baseData['slot'] = 'Shared Me!';
-        $baseData['attributes']->setAttributes([
-            'url' => 'https://www.defectivecode.com',
-        ]);
+        $link = Blade::render(
+            '<x-link-sharer service="twitter" :text="$text" url="https://www.defectivecode.com"><span>{{ $label }}</span></x-link-sharer>',
+            ['text' => 123, 'label' => 'Shared Me!']
+        );
 
-        return $baseData;
+        $this->assertEquals(
+            '<a href="https://twitter.com/intent/tweet?text=123&url=https%3A%2F%2Fwww.defectivecode.com" target="_blank" class=""><span>Shared Me!</span></a>',
+            $link
+        );
+    }
+
+    protected function getPackageProviders($app): array
+    {
+        return [LinkSharerServiceProvider::class];
     }
 }
