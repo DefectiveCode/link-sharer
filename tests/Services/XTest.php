@@ -6,14 +6,19 @@ namespace DefectiveCode\LinkSharer\Tests\Services;
 
 use PHPUnit\Framework\Attributes\Test;
 use DefectiveCode\LinkSharer\Services\X;
+use PHPUnit\Framework\Attributes\TestWith;
 use DefectiveCode\LinkSharer\Tests\TestCase;
+use DefectiveCode\LinkSharer\Services\Twitter;
 
 class XTest extends TestCase
 {
+    /** @param class-string<X> $class */
     #[Test]
-    public function itGeneratesAShareLink(): void
+    #[TestWith([X::class])]
+    #[TestWith([Twitter::class])]
+    public function itGeneratesAShareLink(string $class): void
     {
-        $service = new X([
+        $service = new $class([
             'hashtags' => 'red,blue',
             'text' => 'Share Me',
             'url' => 'https://www.defectivecode.com',
