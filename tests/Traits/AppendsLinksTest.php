@@ -4,13 +4,14 @@ declare(strict_types=1);
 
 namespace DefectiveCode\LinkSharer\Tests\Traits;
 
+use PHPUnit\Framework\Attributes\Test;
 use DefectiveCode\LinkSharer\Tests\TestCase;
 use DefectiveCode\LinkSharer\Services\Service;
 use DefectiveCode\LinkSharer\Traits\AppendsLinks;
 
 class AppendsLinksTest extends TestCase
 {
-    /** @test */
+    #[Test]
     public function itAppendsALinkToTheText(): void
     {
         $service = new class(['text' => 'text', 'url' => 'https://www.defectivecode.com']) extends Service

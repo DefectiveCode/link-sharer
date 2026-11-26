@@ -8,10 +8,24 @@ use Illuminate\Support\Arr;
 
 abstract class Service
 {
+    protected string $baseUrl;
+
+    /** @var array<string, string> */
+    protected array $baseParameterMapping = [
+        'text' => 'text',
+        'url' => 'url',
+    ];
+
+    /** @var list<string> */
+    protected array $additionalParameters = [];
+
+    /** @var array<string, string> */
+    protected array $defaultParameters = [];
+
+    /** @param array<string, string> $attributes */
     public function __construct(
         protected array $attributes,
-    ) {
-    }
+    ) {}
 
     public function generateLink(): string
     {
@@ -33,7 +47,7 @@ abstract class Service
 
                     return [$key => $value];
                 })
-                ->merge($this->defaultParameters ?? [])
+                ->merge($this->defaultParameters)
                 ->only($this->allowedParameters())
                 ->toArray()
         );
@@ -44,12 +58,13 @@ abstract class Service
         return in_array($parameter, ['url', 'text']);
     }
 
+    /** @return list<string> */
     protected function allowedParameters(): array
     {
         return array_merge(
-            property_exists($this, 'baseParameterMapping') ? array_values($this->baseParameterMapping) : ['text', 'url'],
-            property_exists($this, 'additionalParameters') ? array_values($this->additionalParameters) : [],
-            property_exists($this, 'defaultParameters') ? array_keys($this->defaultParameters) : [],
+            array_values($this->baseParameterMapping),
+            $this->additionalParameters,
+            array_keys($this->defaultParameters),
         );
     }
 }

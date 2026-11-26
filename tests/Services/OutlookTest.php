@@ -4,12 +4,13 @@ declare(strict_types=1);
 
 namespace DefectiveCode\LinkSharer\Tests\Services;
 
+use PHPUnit\Framework\Attributes\Test;
 use DefectiveCode\LinkSharer\Tests\TestCase;
 use DefectiveCode\LinkSharer\Services\Outlook;
 
 class OutlookTest extends TestCase
 {
-    /** @test */
+    #[Test]
     public function itGeneratesAShareLink(): void
     {
         $service = new Outlook([

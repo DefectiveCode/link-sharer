@@ -9,11 +9,12 @@ use DefectiveCode\LinkSharer\Services\Service;
 
 class SharerFactory
 {
+    /** @param array<string, string> $attributes */
     public static function make(string $service, array $attributes): Service
     {
         $class = __NAMESPACE__.'\\Services\\'.ucfirst($service);
 
-        if (! class_exists($class)) {
+        if (! is_subclass_of($class, Service::class)) {
             throw new InvalidArgumentException("Service {$service} does not exist. Please review the documentation for supported services.");
         }
 

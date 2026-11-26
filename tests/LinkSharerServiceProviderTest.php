@@ -4,15 +4,17 @@ declare(strict_types=1);
 
 namespace DefectiveCode\LinkSharer\Tests;
 
+use Illuminate\Support\Facades\Blade;
+use PHPUnit\Framework\Attributes\Test;
 use DefectiveCode\LinkSharer\LinkSharerServiceProvider;
 
 class LinkSharerServiceProviderTest extends TestCase
 {
-    /** @test */
+    #[Test]
     public function itRegistersTheBladeComponent(): void
     {
-        (new LinkSharerServiceProvider($this->app))->boot();
+        (new LinkSharerServiceProvider(app()))->boot();
 
-        $this->assertArrayHasKey('link-sharer', $this->app->make('blade.compiler')->getClassComponentAliases());
+        $this->assertArrayHasKey('link-sharer', Blade::getClassComponentAliases());
     }
 }

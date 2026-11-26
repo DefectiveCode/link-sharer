@@ -4,12 +4,13 @@ declare(strict_types=1);
 
 namespace DefectiveCode\LinkSharer\Tests\Services;
 
+use PHPUnit\Framework\Attributes\Test;
 use DefectiveCode\LinkSharer\Tests\TestCase;
 use DefectiveCode\LinkSharer\Services\Service;
 
 class ServiceTest extends TestCase
 {
-    /** @test */
+    #[Test]
     public function itEncodesTheQueryParameters(): void
     {
         $service = new class(['text' => '&&&Share Me&&&', 'url' => 'https://www.defectivecode.com']) extends Service
@@ -23,7 +24,7 @@ class ServiceTest extends TestCase
         );
     }
 
-    /** @test */
+    #[Test]
     public function itRemovesEmptyParameters(): void
     {
         $service = new class(['text' => 'Share Me']) extends Service
@@ -41,7 +42,7 @@ class ServiceTest extends TestCase
         );
     }
 
-    /** @test */
+    #[Test]
     public function itAppendsTheDefaultParameters(): void
     {
         $service = new class(['text' => 'Share Me', 'url' => 'https://www.defectivecode.com']) extends Service
@@ -59,7 +60,7 @@ class ServiceTest extends TestCase
         );
     }
 
-    /** @test */
+    #[Test]
     public function itMapsTheBaseParameters(): void
     {
         $service = new class(['text' => 'Share Me', 'url' => 'https://www.defectivecode.com']) extends Service

@@ -5,12 +5,13 @@ declare(strict_types=1);
 namespace DefectiveCode\LinkSharer\Tests;
 
 use InvalidArgumentException;
+use PHPUnit\Framework\Attributes\Test;
 use DefectiveCode\LinkSharer\SharerFactory;
 use DefectiveCode\LinkSharer\Services\Facebook;
 
 class SharerFactoryTest extends TestCase
 {
-    /** @test */
+    #[Test]
     public function itResolvesAService(): void
     {
         $sharer = SharerFactory::make('facebook', []);
@@ -18,7 +19,7 @@ class SharerFactoryTest extends TestCase
         $this->assertInstanceOf(Facebook::class, $sharer);
     }
 
-    /** @test */
+    #[Test]
     public function itThrowsAnExceptionIfTheServiceDoesNotExist(): void
     {
         $this->expectException(InvalidArgumentException::class);
